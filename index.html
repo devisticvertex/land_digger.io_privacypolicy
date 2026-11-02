@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Land Digger.io | Devistic Vertex</title>
+  <meta name="description" content="Official Privacy Policy for Land Digger.io (com.devisticvertex.landdigger.io) published by Devistic Vertex. Explaining data collection, Google Play billing, Supabase cloud sync, ads, and user data rights.">
+  <meta name="author" content="Devistic Vertex">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Privacy Policy - Land Digger.io">
+  <meta property="og:description" content="Learn how Land Digger.io collects, uses, and safeguards your player data. Google Play, GDPR, CCPA, and COPPA compliant.">
+  <meta property="og:image" content="assets/logo_land_digger.png">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #080E1E;
+      --bg-card: rgba(16, 26, 50, 0.85);
+      --bg-card-hover: rgba(23, 37, 71, 0.95);
+      --bg-glass: rgba(255, 255, 255, 0.05);
+      --border-subtle: rgba(114, 194, 255, 0.18);
+      --border-accent: #1B6BF3;
+      --border-gold: #FBBF24;
+      
+      --text-main: #E2E8F0;
+      --text-heading: #FFFFFF;
+      --text-muted: #94A3B8;
+      --text-link: #38BDF8;
+
+      --primary-blue: #1B6BF3;
+      --primary-cyan: #38BDF8;
+      --accent-gold: #FBBF24;
+      --accent-green: #22C55E;
+      --accent-red: #EF4444;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+
+      --shadow-glow: 0 0 25px rgba(27, 107, 243, 0.25);
+      --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      color-scheme: dark;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(27, 107, 243, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 45%),
+        linear-gradient(180deg, #070B16 0%, #0B1327 100%);
+      background-attachment: fixed;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-main);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Reading Progress Bar */
+    #progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: transparent;
+      z-index: 1000;
+    }
+    #progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #1B6BF3, #38BDF8, #FBBF24);
+      transition: width 0.1s ease;
+    }
+
+    /* Header Nav */
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(8, 14, 30, 0.85);
+      border-bottom: 1px solid var(--border-subtle);
+      z-index: 900;
+      transition: all 0.3s ease;
+    }
+
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(27, 107, 243, 0.4);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      object-fit: cover;
+    }
+
+    .brand-text h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-text span {
+      font-size: 0.78rem;
+      color: var(--primary-cyan);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-action {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-action:hover {
+      background: rgba(27, 107, 243, 0.2);
+      border-color: var(--primary-cyan);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    .btn-action.primary {
+      background: linear-gradient(135deg, #1B6BF3 0%, #0088FF 100%);
+      border-color: #72C2FF;
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(27, 107, 243, 0.4);
+    }
+    .btn-action.primary:hover {
+      box-shadow: 0 6px 20px rgba(27, 107, 243, 0.6);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 60px 24px 30px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .status-badge {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-google {
+      background: rgba(34, 197, 94, 0.12);
+      color: #4ADE80;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+
+    .badge-gdpr {
+      background: rgba(56, 189, 248, 0.12);
+      color: #38BDF8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .badge-coppa {
+      background: rgba(251, 191, 36, 0.12);
+      color: #FBBF24;
+      border: 1px solid rgba(251, 191, 36, 0.3);
+    }
+
+    .hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      color: #FFFFFF;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .hero-title .highlight {
+      background: linear-gradient(135deg, #72C2FF 0%, #38BDF8 50%, #FBBF24 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 24px;
+    }
+
+    .meta-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px 24px;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      box-shadow: var(--shadow-card);
+    }
+
+    .meta-item strong {
+      color: #FFFFFF;
+    }
+
+    /* "At a Glance" Quick Grid */
+    .at-glance-section {
+      max-width: 1240px;
+      margin: 30px auto 20px;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--primary-cyan);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .glance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .glance-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glance-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .glance-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .glance-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .glance-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Search & Filter Bar */
+    .search-wrapper {
+      max-width: 1240px;
+      margin: 20px auto 30px;
+      padding: 0 24px;
+    }
+
+    .search-box {
+      background: rgba(16, 26, 50, 0.9);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.2s;
+    }
+
+    .search-box:focus-within {
+      border-color: var(--primary-cyan);
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
+    }
+
+    .search-box svg {
+      color: var(--primary-cyan);
+      flex-shrink: 0;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: #FFFFFF;
+    }
+
+    .search-box input::placeholder {
+      color: #64748B;
+    }
+
+    /* Main Layout with Sticky Sidebar */
+    .main-layout {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 36px;
+      position: relative;
+    }
+
+    /* Sidebar Navigation */
+    aside.toc-sidebar {
+      position: sticky;
+      top: 90px;
+      max-height: calc(100vh - 110px);
+      overflow-y: auto;
+      padding-right: 8px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border-subtle) transparent;
+    }
+
+    .toc-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .toc-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 7px 10px;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+      line-height: 1.35;
+    }
+
+    .toc-link:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: #FFFFFF;
+    }
+
+    .toc-link.active {
+      background: rgba(27, 107, 243, 0.25);
+      border-left: 3px solid var(--primary-cyan);
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    .toc-link span.num {
+      color: var(--primary-cyan);
+      font-size: 0.75rem;
+      font-weight: 700;
+      min-width: 18px;
+    }
+
+    /* Policy Content */
+    article.policy-content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .policy-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.2s;
+    }
+
+    .policy-section:hover {
+      border-color: rgba(114, 194, 255, 0.35);
+    }
+
+    .policy-section h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+    }
+
+    .section-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(27, 107, 243, 0.25);
+      border: 1px solid rgba(114, 194, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: var(--primary-cyan);
+    }
+
+    .policy-section h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #F1F5F9;
+      margin: 22px 0 10px;
+    }
+
+    .policy-section p {
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      color: #CBD5E1;
+      line-height: 1.75;
+    }
+
+    .policy-section ul, .policy-section ol {
+      margin: 12px 0 18px 20px;
+      color: #CBD5E1;
+      font-size: 0.95rem;
+    }
+
+    .policy-section li {
+      margin-bottom: 8px;
+      line-height: 1.65;
+    }
+
+    .policy-section li strong {
+      color: #FFFFFF;
+    }
+
+    /* Highlight Alert Box */
+    .alert-box {
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin: 18px 0;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .alert-info {
+      background: rgba(27, 107, 243, 0.12);
+      border: 1px solid rgba(114, 194, 255, 0.35);
+      color: #E2E8F0;
+    }
+
+    .alert-warning {
+      background: rgba(251, 191, 36, 0.12);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      color: #FEF08A;
+    }
+
+    .alert-success {
+      background: rgba(34, 197, 94, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      color: #BBF7D0;
+    }
+
+    .alert-icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Table Styles */
+    .table-container {
+      overflow-x: auto;
+      margin: 20px 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    th {
+      background: rgba(27, 107, 243, 0.2);
+      color: #FFFFFF;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: #CBD5E1;
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    code {
+      background: rgba(0, 0, 0, 0.4);
+      color: var(--primary-cyan);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.85em;
+      border: 1px solid rgba(114, 194, 255, 0.2);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* Third-party SDK Cards */
+    .sdk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin: 18px 0;
+    }
+
+    .sdk-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      transition: all 0.2s ease;
+    }
+
+    .sdk-card:hover {
+      border-color: var(--primary-cyan);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .sdk-card h4 {
+      font-family: 'Outfit', sans-serif;
+      color: #FFFFFF;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sdk-card p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .sdk-card a {
+      color: var(--primary-cyan);
+      font-size: 0.82rem;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .sdk-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Account Deletion Card */
+    .deletion-card {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(27, 107, 243, 0.1) 100%);
+      border: 1.5px solid rgba(239, 68, 68, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin: 20px 0;
+    }
+
+    .deletion-card h3 {
+      color: #FCA5A5;
+      font-size: 1.2rem;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .steps-list {
+      counter-reset: step-counter;
+      list-style: none;
+      margin: 16px 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .step-item {
+      position: relative;
+      padding-left: 40px;
+      font-size: 0.92rem;
+      color: #E2E8F0;
+    }
+
+    .step-item::before {
+      counter-increment: step-counter;
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 26px;
+      height: 26px;
+      background: #EF4444;
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.78rem;
+    }
+
+    /* Back to Top Floating Button */
+    #back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #1B6BF3, #0288D1);
+      border: 1.5px solid #72C2FF;
+      color: #FFFFFF;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.25s ease;
+      z-index: 800;
+    }
+
+    #back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    #back-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 22px rgba(27, 107, 243, 0.6);
+    }
+
+    /* Footer */
+    footer {
+      background: #050811;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: auto;
+      padding: 40px 24px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .footer-brand strong {
+      color: #FFFFFF;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-cyan);
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+      }
+      header, aside, .search-wrapper, .badge-row, .meta-card, .at-glance-section, #back-to-top, footer, .btn-action {
+        display: none !important;
+      }
+      .main-layout {
+        display: block !important;
+        padding: 0 !important;
+      }
+      .policy-section {
+        background: transparent !important;
+        border: 1px solid #CCC !important;
+        box-shadow: none !important;
+        margin-bottom: 20px !important;
+        page-break-inside: avoid;
+      }
+      .policy-section h2, .policy-section h3, .policy-section p, th, td {
+        color: #000000 !important;
+      }
+      table {
+        border: 1px solid #000;
+      }
+      th {
+        background: #EEE !important;
+        color: #000 !important;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+      aside.toc-sidebar {
+        display: none;
+      }
+      .policy-section {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-container {
+        padding: 12px 16px;
+      }
+      .hero-section {
+        padding: 36px 16px 20px;
+      }
+      .policy-section {
+        padding: 18px;
+        border-radius: var(--radius-md);
+      }
+      .brand-text span {
+        display: none;
+      }
+      .btn-action span.label {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Progress Bar -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header">
+    <div class="nav-container">
+      <a href="#" class="brand-wrap">
+        <img src="assets/app_icon.png" alt="Land Digger.io App Icon" class="brand-icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'44\' height=\'44\' viewBox=\'0 0 44 44\'><rect width=\'44\' height=\'44\' rx=\'12\' fill=\'%231B6BF3\'/><path d=\'M22 10L32 20L22 30L12 20Z\' fill=\'%23FBBF24\'/></svg>'">
+        <div class="brand-text">
+          <h1>Land Digger.io</h1>
+          <span>Devistic Vertex Studio</span>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <button class="btn-action" onclick="window.print()" title="Print or save as PDF">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"></path></svg>
+          <span class="label">Print / PDF</span>
+        </button>
+
+        <a href="#contact" class="btn-action primary">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          <span class="label">Contact Us</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="badge-row">
+      <span class="status-badge badge-google">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        Google Play Verified
+      </span>
+      <span class="status-badge badge-gdpr">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        GDPR & CCPA Compliant
+      </span>
+      <span class="status-badge badge-coppa">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h2v2h-2zm0-10h2v8h-2z"/></svg>
+        COPPA Family Safe
+      </span>
+    </div>
+
+    <h1 class="hero-title">
+      Privacy Policy for <span class="highlight">Land Digger.io</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Transparent guidelines on how we respect, manage, and safeguard your gameplay information, cloud progress, and user rights.
+    </p>
+
+    <div class="meta-card">
+      <div class="meta-item">Application ID: <code>com.devisticvertex.landdigger.io</code></div>
+      <div class="meta-item">Developer: <strong>Devistic Vertex</strong></div>
+      <div class="meta-item">Effective Date: <strong>November 02, 2026</strong></div>
+      <div class="meta-item">Version: <strong>1.0.0</strong></div>
+    </div>
+  </section>
+
+  <!-- At a Glance Section -->
+  <section class="at-glance-section">
+    <div class="section-label">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      At a Glance: Key Privacy Commitments
+    </div>
+
+    <div class="glance-grid">
+      <div class="glance-card">
+        <div class="glance-icon">🛡️</div>
+        <h3>No Intrusive Tracking</h3>
+        <p>We do not access your precise physical GPS location, microphone, camera, contacts, photo library, or SMS messages.</p>
+      </div>
+
+      <div class="glance-card">
+        <div class="glance-icon">💳</div>
+        <h3>Secure In-App Purchases</h3>
+        <p>All virtual coin and skin bundle purchases are processed directly by Google Play Billing. We never receive or store your credit card details.</p>
+      </div>
+
+      <div class="glance-card">
+        <div class="glance-icon">☁️</div>
+        <h3>Cloud Save & Guest Play</h3>
+        <p>Play as a guest without signing in, or link with Google to sync your digger skins and high scores across devices via Supabase.</p>
+      </div>
+
+      <div class="glance-card">
+        <div class="glance-icon">🗑️</div>
+        <h3>Instant Account Deletion</h3>
+        <p>You maintain full control. Delete all your cloud data, stats, and account in seconds directly from the in-game Settings menu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Filter -->
+  <div class="search-wrapper">
+    <div class="search-box">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="text" id="policy-search" placeholder="Quick search policy (e.g., 'ads', 'delete account', 'purchase', 'children', 'Supabase')..." onkeyup="filterSections()">
+    </div>
+  </div>
+
+  <!-- Main Content Layout -->
+  <main class="main-layout">
+    <!-- Sticky Table of Contents -->
+    <aside class="toc-sidebar">
+      <div class="toc-card">
+        <div class="toc-title">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+          Table of Contents
+        </div>
+
+        <ul class="toc-list" id="toc-nav">
+          <li><a href="#intro" class="toc-link"><span class="num">01</span> Introduction & Scope</a></li>
+          <li><a href="#info-collected" class="toc-link"><span class="num">02</span> Information We Collect</a></li>
+          <li><a href="#permissions" class="toc-link"><span class="num">03</span> App Permissions</a></li>
+          <li><a href="#how-we-use" class="toc-link"><span class="num">04</span> How We Use Data</a></li>
+          <li><a href="#third-party" class="toc-link"><span class="num">05</span> Third-Party Services</a></li>
+          <li><a href="#payments" class="toc-link"><span class="num">06</span> In-App Purchases</a></li>
+          <li><a href="#advertising" class="toc-link"><span class="num">07</span> Advertising & AdMob</a></li>
+          <li><a href="#children" class="toc-link"><span class="num">08</span> Children's Privacy</a></li>
+          <li><a href="#retention-security" class="toc-link"><span class="num">09</span> Retention & Security</a></li>
+          <li><a href="#user-rights" class="toc-link"><span class="num">10</span> Your Privacy Rights</a></li>
+          <li><a href="#account-deletion" class="toc-link"><span class="num">11</span> Account Deletion</a></li>
+          <li><a href="#policy-changes" class="toc-link"><span class="num">12</span> Policy Updates</a></li>
+          <li><a href="#contact" class="toc-link"><span class="num">13</span> Contact Us</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Articles / Sections -->
+    <article class="policy-content" id="policy-article">
+      
+      <!-- Section 1 -->
+      <section class="policy-section" id="intro">
+        <h2><span class="section-icon">1</span> 1. Introduction & Scope</h2>
+        <p>
+          Welcome to <strong>Land Digger.io</strong>! This Privacy Policy describes how <strong>Devistic Vertex</strong> ("we", "us", or "our") collects, uses, protects, and discloses personal and technical information when you download, install, play, or interact with our mobile game application <strong>Land Digger.io</strong> (Android Application ID: <code>com.devisticvertex.landdigger.io</code>).
+        </p>
+        <p>
+          Land Digger.io is an arcade territory-conquest casual game where players dig excavation trails across an arena grid, capture land, outmaneuver rivals, collect custom skins, and participate in World Tour challenges.
+        </p>
+        <p>
+          We are committed to operating in full compliance with the <strong>Google Play Developer Distribution Agreement & Policies</strong>, the <strong>General Data Protection Regulation (GDPR)</strong>, the <strong>California Consumer Privacy Act (CCPA/CPRA)</strong>, and the <strong>Children’s Online Privacy Protection Act (COPPA)</strong>.
+        </p>
+        <div class="alert-box alert-info">
+          <span class="alert-icon">ℹ️</span>
+          <div>
+            <strong>Summary:</strong> By downloading, installing, or playing Land Digger.io, you agree to the practices outlined in this policy. If you do not agree with any part of this policy, you may discontinue use of the game or delete your account at any time.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="policy-section" id="info-collected">
+        <h2><span class="section-icon">2</span> 2. Information We Collect</h2>
+        <p>
+          We believe in data minimization. We only collect the minimal information necessary to deliver smooth gameplay, preserve your skins and high scores, and provide reliable account services.
+        </p>
+
+        <h3>A. Information You Provide Directly</h3>
+        <ul>
+          <li>
+            <strong>Player Display Name:</strong> You can choose and edit a custom nickname (3–16 characters) shown above your digger in matches and on the arena leaderboard. This does not have to be your real legal name.
+          </li>
+          <li>
+            <strong>Google Account Profile (Optional):</strong> If you choose to link your account via Google Sign-In, we receive authentication tokens, your public profile name, your email address, and a unique user identifier provided through Google OAuth and Supabase Auth.
+          </li>
+          <li>
+            <strong>Support Inquiries:</strong> If you contact our support team via email, we receive your email address, device model, and any correspondence you provide to help resolve your issue.
+          </li>
+        </ul>
+
+        <h3>B. Information Collected Automatically During Gameplay</h3>
+        <ul>
+          <li>
+            <strong>Game Progression & Statistics:</strong> Match outcomes, maximum percentage of territory captured, bot elimination count ("kills"), survival duration, match rank, classic/timed game modes, difficulty preferences, and World Tour stage completions.
+          </li>
+          <li>
+            <strong>Virtual Economy Balance:</strong> In-game coin balance, gem balance, unlocked skins, currently equipped digger skin, and daily login reward streaks.
+          </li>
+          <li>
+            <strong>Device & Technical Data:</strong> Operating system version (Android), device manufacturer and model, screen resolution, language settings, and general IP-derived country code (2-letter ISO code, e.g., US, PK, DE) used for regional leaderboard groupings.
+          </li>
+          <li>
+            <strong>Advertising Identifier:</strong> Google Advertising ID (AAID) subject to your device settings and consent, used for ad fraud prevention and delivery of rewarded videos.
+          </li>
+        </ul>
+
+        <div class="alert-box alert-success">
+          <span class="alert-icon">🔒</span>
+          <div>
+            <strong>Safe Public Profiles:</strong> Our cloud database uses a protected view (<code>public_profiles</code>) for leaderboards that exposes only your nickname, equipped skin, and match records. Your private coin wallet, gem balances, and email are never publicly exposed to other players.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="policy-section" id="permissions">
+        <h2><span class="section-icon">3</span> 3. App Permissions & Why We Need Them</h2>
+        <p>
+          Land Digger.io requests only the standard Android permissions strictly required to execute core gameplay and cloud features. We do not ask for camera, contacts, storage, or microphone access:
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Permission Name</th>
+                <th>Category</th>
+                <th>Purpose & Justification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>android.permission.INTERNET</code></td>
+                <td>Network</td>
+                <td>Required to connect with Supabase cloud servers, synchronize player scores, authenticate with Google Sign-In, and verify in-app purchases.</td>
+              </tr>
+              <tr>
+                <td><code>android.permission.ACCESS_NETWORK_STATE</code></td>
+                <td>Network</td>
+                <td>Detects whether the device is connected to Wi-Fi, cellular, or offline so the game can switch smoothly to offline/guest mode.</td>
+              </tr>
+              <tr>
+                <td><code>android.permission.VIBRATE</code></td>
+                <td>Hardware</td>
+                <td>Triggers tactile haptic feedback during digs, collisions, loop captures, and UI button presses (can be toggled off in Settings).</td>
+              </tr>
+              <tr>
+                <td><code>com.android.vending.BILLING</code></td>
+                <td>In-App Billing</td>
+                <td>Enables the Google Play In-App Purchase dialog for buying optional coin packages, gem packs, and cosmetic skins.</td>
+              </tr>
+              <tr>
+                <td><code>android.permission.WAKE_LOCK</code></td>
+                <td>Hardware</td>
+                <td>Prevents your phone or tablet screen from dimming or going to sleep during active excavation gameplay matches.</td>
+              </tr>
+              <tr>
+                <td><code>com.google.android.gms.permission.AD_ID</code></td>
+                <td>Advertising</td>
+                <td>Required on Android 13+ (API 33+) by Google Mobile Ads SDK for attribution, frequency capping, and ad fraud detection.</td>
+              </tr>
+              <tr>
+                <td><code>android.permission.MODIFY_AUDIO_SETTINGS</code></td>
+                <td>Audio</td>
+                <td>Adjusts master sound effects (SFX) and background music (BGM) levels based on your in-game audio sliders.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="policy-section" id="how-we-use">
+        <h2><span class="section-icon">4</span> 4. How We Use Collected Data</h2>
+        <p>We process information exclusively for legitimate game operations and enhancement:</p>
+        <ul>
+          <li><strong>Delivering Core Gameplay:</strong> Generating territory maps, computing bounded polygon flood-fills, synchronizing bot behaviors, and rendering real-time radar minimaps.</li>
+          <li><strong>Cross-Device Cloud Sync:</strong> Preserving your unlocked skins, rank roads, and currency balance across device changes or game reinstallations.</li>
+          <li><strong>Fair Play & Leaderboards:</strong> Calculating global rankings, detecting fraudulent score submissions, and ensuring a balanced competitive environment.</li>
+          <li><strong>In-App Economy Management:</strong> Fulfilling Google Play digital goods purchases and awarding daily reward calendar streaks.</li>
+          <li><strong>Bug Fixing & Stability:</strong> Diagnosing game engine crashes, optimizing frame rates (targeting 60–120 FPS), and improving offline simulation caches.</li>
+          <li><strong>Communication:</strong> Responding directly to your technical support inquiries, bug reports, and account recovery requests.</li>
+        </ul>
+      </section>
+
+      <!-- Section 5 -->
+      <section class="policy-section" id="third-party">
+        <h2><span class="section-icon">5</span> 5. Third-Party Services & SDK Integrations</h2>
+        <p>
+          To maintain high performance and reliable security, Land Digger.io integrates trusted industry-standard SDKs. Each third-party service processes information according to its respective privacy standards:
+        </p>
+
+        <div class="sdk-grid">
+          <div class="sdk-card">
+            <h4>Supabase <span>☁️</span></h4>
+            <p>Provides managed PostgreSQL cloud database, row-level security (RLS), and authentication endpoints for player profiles.</p>
+            <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">
+              Read Supabase Privacy Policy &rarr;
+            </a>
+          </div>
+
+          <div class="sdk-card">
+            <h4>Google Play Services <span>🎮</span></h4>
+            <p>Handles Google Sign-In, OAuth token verification, and Google Play Games profile integration.</p>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              Read Google Privacy Policy &rarr;
+            </a>
+          </div>
+
+          <div class="sdk-card">
+            <h4>Google Play In-App Billing <span>💳</span></h4>
+            <p>Manages transaction processing, product queries, and purchase verification for in-game currency and skins.</p>
+            <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank" rel="noopener noreferrer">
+              Google Payments Privacy Notice &rarr;
+            </a>
+          </div>
+
+          <div class="sdk-card">
+            <h4>Google Mobile Ads (AdMob) <span>📢</span></h4>
+            <p>Delivers optional rewarded video advertisements (e.g., daily bonus coins, 7-day ad-free pass) and general ads.</p>
+            <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">
+              Google Ads & Privacy &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6 -->
+      <section class="policy-section" id="payments">
+        <h2><span class="section-icon">6</span> 6. In-App Purchases & Virtual Currency</h2>
+        <p>
+          Land Digger.io offers optional in-game purchases through the Google Play Store (e.g., Coin Bundles, Gem Pouches, All-Skins Pack).
+        </p>
+        <ul>
+          <li><strong>No Real Money Value:</strong> Coins, gems, and skins are strictly virtual entertainment items within Land Digger.io. They carry no real-world monetary value and cannot be exchanged, transferred, or redeemed for cash.</li>
+          <li><strong>Google Payment Processing:</strong> All financial transactions are securely handled by Google Play. We do not collect, view, or retain credit card numbers, bank account numbers, or billing addresses.</li>
+          <li><strong>Audit Logging:</strong> Our database maintains a secure transaction audit log (<code>purchases_log</code>) recording the product ID and Google Play order ID to ensure purchased items can be restored reliably upon reinstallation.</li>
+        </ul>
+      </section>
+
+      <!-- Section 7 -->
+      <section class="policy-section" id="advertising">
+        <h2><span class="section-icon">7</span> 7. Advertising & AdMob Policy</h2>
+        <p>
+          Land Digger.io is designed with player satisfaction as top priority. While the game provides an enjoyable experience without mandatory advertisements, optional ad placements (such as Rewarded Video Ads for bonus coins or a 7-Day Ad-Free Pass) may be powered by <strong>Google Mobile Ads (AdMob)</strong>.
+        </p>
+        <p>
+          Google AdMob may collect and process device identifiers (including Google Advertising ID), coarse location based on IP, and ad interaction data to provide appropriate ad content and prevent click fraud.
+        </p>
+        <div class="alert-box alert-info">
+          <span class="alert-icon">🎯</span>
+          <div>
+            <strong>Personalized Ads Opt-Out:</strong> You can reset or opt out of personalized advertisements at any time directly through your device settings:<br>
+            <code>Settings &rarr; Google &rarr; Ads &rarr; Reset advertising ID or Delete advertising ID</code>.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8 -->
+      <section class="policy-section" id="children">
+        <h2><span class="section-icon">8</span> 8. Children’s Privacy (COPPA & GDPR-K Compliance)</h2>
+        <p>
+          Land Digger.io is intended as a family-friendly casual game suitable for general audiences. Protecting children’s privacy online is of paramount importance to us.
+        </p>
+        <ul>
+          <li>We do <strong>not</strong> knowingly solicit or collect personally identifiable information from children under the age of 13 (or under 16 in the European Economic Area / UK).</li>
+          <li>Children can play the entire game as guests without creating an account or providing an email address.</li>
+          <li>All advertising configurations within the app are set to comply with Google Play’s Families Policy and COPPA requirements, restricting behavioral profiling for younger users.</li>
+          <li>If a parent or legal guardian discovers that their child has provided personal information without parental consent, please contact us immediately at <strong>support@devisticvertex.com</strong>. We will promptly delete that information from our servers.</li>
+        </ul>
+      </section>
+
+      <!-- Section 9 -->
+      <section class="policy-section" id="retention-security">
+        <h2><span class="section-icon">9</span> 9. Data Retention & Security Measures</h2>
+        <p>
+          We employ robust technical and organizational security measures to protect your game data from unauthorized access, loss, or misuse:
+        </p>
+        <ul>
+          <li><strong>Encryption in Transit:</strong> All communications between the Land Digger.io mobile client and our backend servers are encrypted using modern Transport Layer Security (TLS 1.2 / 1.3 / HTTPS).</li>
+          <li><strong>Database Row-Level Security (RLS):</strong> Our PostgreSQL cloud database enforces strict cryptographic row-level access control. Only authenticated players can view or update their private inventory.</li>
+          <li><strong>Data Retention Period:</strong> Guest gameplay records are retained locally on your device. Cloud account profiles are retained for as long as your account remains active or until you request account deletion.</li>
+        </ul>
+      </section>
+
+      <!-- Section 10 -->
+      <section class="policy-section" id="user-rights">
+        <h2><span class="section-icon">10</span> 10. Your Privacy Rights (GDPR & CCPA)</h2>
+        <p>
+          Depending on your location (such as the European Union, United Kingdom, or California), you are entitled to specific legal rights regarding your personal data:
+        </p>
+        <ul>
+          <li><strong>Right to Access:</strong> You may request a copy of the personal data associated with your game account.</li>
+          <li><strong>Right to Rectification:</strong> You can modify your player display name directly at any time in the in-game Settings screen.</li>
+          <li><strong>Right to Erasure ("Right to Be Forgotten"):</strong> You have the right to request the complete deletion of your account, cloud profile, and match history.</li>
+          <li><strong>Right to Data Portability:</strong> You may request your game data in a structured, machine-readable format.</li>
+          <li><strong>Right to Withdraw Consent:</strong> You can revoke Google Sign-In access through your Google Account permissions dashboard at any time.</li>
+          <li><strong>Non-Discrimination:</strong> We will never discriminate against you, deny you game access, or provide lesser gameplay quality for exercising any of your privacy rights.</li>
+        </ul>
+      </section>
+
+      <!-- Section 11 -->
+      <section class="policy-section" id="account-deletion">
+        <h2><span class="section-icon">11</span> 11. User Account & Data Deletion Walkthrough</h2>
+        <p>
+          We respect your right to control your digital footprint. Land Digger.io provides a transparent, immediate self-service deletion option directly inside the game, fully compliant with Google Play’s Account Deletion Policy.
+        </p>
+
+        <div class="deletion-card">
+          <h3>
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            How to Delete Your Account and Data Directly In-Game:
+          </h3>
+          <ol class="steps-list">
+            <li class="step-item">
+              Launch <strong>Land Digger.io</strong> on your mobile device.
+            </li>
+            <li class="step-item">
+              From the Main Lobby, tap the <strong>Gear Icon (Settings)</strong> located in the upper screen bar.
+            </li>
+            <li class="step-item">
+              Scroll down to the Danger Actions section and tap the red <strong>"Delete"</strong> button (Delete Account & Data).
+            </li>
+            <li class="step-item">
+              A confirmation dialog will appear explaining that all cloud records, stats, and coins will be permanently removed. Tap <strong>"Delete"</strong> to confirm.
+            </li>
+            <li class="step-item">
+              Our servers immediately delete your Supabase profile, match logs, and wipe all local device cache.
+            </li>
+          </ol>
+        </div>
+
+        <p>
+          <strong>Alternative Email Deletion Request:</strong> If you have uninstalled the application or cannot access your device, you can email our support team at <strong>support@devisticvertex.com</strong> with the subject line <em>"Account Deletion Request - Land Digger.io"</em> along with your registered Google email address. We will verify your request and permanently delete all records within 7 business days.
+        </p>
+      </section>
+
+      <!-- Section 12 -->
+      <section class="policy-section" id="policy-changes">
+        <h2><span class="section-icon">12</span> 12. Updates to This Privacy Policy</h2>
+        <p>
+          We may periodically update this Privacy Policy to reflect enhancements to Land Digger.io, new game modes, updated SDK versions, or emerging regulatory guidelines.
+        </p>
+        <p>
+          Whenever modifications occur, we will update the "Effective Date" at the top of this document. For significant updates that impact how personal data is handled, we will post an in-game alert or notification prior to the change taking effect.
+        </p>
+      </section>
+
+      <!-- Section 13 -->
+      <section class="policy-section" id="contact">
+        <h2><span class="section-icon">13</span> 13. Contact Information & Support</h2>
+        <p>
+          If you have questions, feedback, inquiries regarding this Privacy Policy, or wish to exercise your data rights, please reach out to our privacy team:
+        </p>
+
+        <div class="sdk-card" style="margin-top: 16px;">
+          <h4 style="color: #38BDF8; font-size: 1.1rem; margin-bottom: 12px;">Devistic Vertex Studio</h4>
+          <p><strong>Game Title:</strong> Land Digger.io</p>
+          <p><strong>Application ID:</strong> <code>com.devisticvertex.landdigger.io</code></p>
+          <p><strong>Support & Privacy Email:</strong> <a href="mailto:support@devisticvertex.com" style="color: #FBBF24; font-weight: 700;">support@devisticvertex.com</a></p>
+          <p><strong>Response Time:</strong> Typically within 24 to 48 business hours.</p>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <strong>Land Digger.io</strong>
+        <span>&copy; 2026 Devistic Vertex. All rights reserved.</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="#intro">Privacy Policy</a>
+        <a href="#permissions">Permissions</a>
+        <a href="#account-deletion">Account Deletion</a>
+        <a href="mailto:support@devisticvertex.com">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // 1. Reading Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+
+      // Back to top toggle
+      const btt = document.getElementById('back-to-top');
+      if (winScroll > 400) {
+        btt.classList.add('visible');
+      } else {
+        btt.classList.remove('visible');
+      }
+    });
+
+    // 2. Active TOC Scroll Spy
+    const sections = document.querySelectorAll('.policy-section');
+    const navLinks = document.querySelectorAll('.toc-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const scrollPos = window.scrollY + 140;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // 3. Search Filter Function
+    function filterSections() {
+      const input = document.getElementById('policy-search');
+      const filter = input.value.toLowerCase().trim();
+      const sections = document.querySelectorAll('.policy-section');
+
+      sections.forEach(sec => {
+        const text = sec.innerText.toLowerCase();
+        if (text.includes(filter)) {
+          sec.style.display = '';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
